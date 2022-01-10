@@ -76,15 +76,15 @@ function endOfSearch(totalHits) {
 
 function loadMore() {
   service.search().then(({ hits, totalHits }) => {
-    if (totalHits < 12) {
+    if (totalHits === 0) {
       Notify.failure(`"We're sorry, 
         but you've reached the end of search results."`);
       load.classList.add('visually-hidden');
       load.style.display = 'none';
-      galleryConstructor(hits);
       return;
+    } else {
+      galleryConstructor(hits);
+      lightbox.refresh();
     }
-    galleryConstructor(hits);
-    lightbox.refresh();
   });
 }

@@ -2,6 +2,7 @@ import 'regenerator-runtime/runtime';
 const axios = require('axios');
 const API_KEY = '25175816-a3b0e6224fe7d6836881efcec';
 const API_URL = 'https://pixabay.com/api/';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export default class PixabayAPI {
   constructor() {
@@ -17,7 +18,8 @@ export default class PixabayAPI {
       this.page += 1;
       return request.data;
     } catch (error) {
-      return error;
+      console.log(error);
+      return { hits: 0, totalHits: 0 };
     }
   }
 
