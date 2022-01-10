@@ -1,11 +1,11 @@
 {
-  "name": "goit-js-hw-09",
+  "name": "goit-js-hw-11",
   "version": "1.1.0",
   "main": "index.js",
-  "homepage": "https://cr1m3s.github.io/goit-js-hw-09",
+  "homepage": "https://cr1m3s.github.io/goit-js-hw-10",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-10/",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-11/",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "repository": {
